@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(230, 230, 230);
+}
+
+.navbar {
+    width: 100%;
+    text-align: left;
+    background-color: rgb(175, 48, 175);
+}
+
+.block {
+    width: 100px;
+    display: inline-block;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.options {
+    text-align:center;
+}
