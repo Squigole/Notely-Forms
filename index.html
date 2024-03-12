@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="navbar">
+    <div class="row" id="navbar">
         <div class="block" id="account">
-            <img src="defaultUser.png" alt="Default User Profile Image">
+            <a href="https://www.google.com" title="Go to your account settings" target="_blank">
+                <img src="defaultUser.png" alt="Default User Profile Image">
+            </a>
         </div>
         <div class="block" id="settings">
-            <img src="settingsIcon.png" alt="Settings Icon">
+            <a href="https://www.google.com" title="Go to your main settings" target="_blank">
+                <img src="settingsIcon.png" alt="Settings Icon">
+            </a>
         </div>
     </div>
-    <div class="options">
-        <div class="newForm">
-            <button>Make New Form</button>
-        </div>
-        <div class="selectForm">
-            <button>Select A Form To Take</button>
+    <div class="row" id="options">
+        <div id="optionsScrollingHighlight">
+            <button id="newForm">Make New Form</button>
+            <button id="selectForm">Select A Form To Take</button>
         </div>
     </div>
 </body>
