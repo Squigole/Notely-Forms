@@ -1,0 +1,84 @@
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#backButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+}
+
+#backButton img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #7b1fa2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Your existing CSS remains the same */
+
+.block {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+
+/* Stylized text appearance for buttons */
+.block {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #7b1fa2;
+    color: white;
+    font-size: 16px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.block:hover {
+    background-color: #9c27b0;
+}
+
+
+.block a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.block:hover {
+    background-color: #9c27b0;
+}
+
+#settingsContent {
+    margin-left: 200px; /* Adjust for navbar width */
+    padding: 20px;
+}
+
+/* Example style for settings content */
+.settings-section {
+    margin-bottom: 20px;
+}
+
+.tab-content {
+    padding: 20px;
+}

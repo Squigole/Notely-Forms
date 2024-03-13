@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+<body>
+    <div id="backButton">
+        <a href="../index.html" title="Go back">
+            <img src="../imgs/backButton.png" alt="Back Button">
+        </a>
+    </div>
+    <div class="row" id="navbar">
+        <button class="block" id="generalSettings" onclick="showTab('general')">General</button>
+        <button class="block" id="accountSettings" onclick="showTab('account')">Account</button>
+        <button class="block" id="securitySettings" onclick="showTab('security')">Security</button>
+    </div>    
+    <div id="settingsContent">
+        <div id="generalTab" class="tab-content">
+            <!-- General Settings Content -->
+            <p>general</p>
+        </div>
+        <div id="accountTab" class="tab-content" style="display: none;">
+            <!-- Account Settings Content -->
+            <p>account</p>
+        </div>
+        <div id="securityTab" class="tab-content" style="display: none;">
+            <!-- Security Settings Content -->
+            <p>security</p>
+        </div>
+    </div>
+
+    <script src="../javascript/settings.js"></script>
+</body>
+</html>
