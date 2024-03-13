@@ -27,10 +27,6 @@ body {
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.block img:hover {
-    background-color: #00000075; /* Apply color on hover */
-}
-
 #options {
     padding: 20px; /* Add some padding */
     text-align: center;
