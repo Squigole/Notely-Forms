@@ -82,3 +82,31 @@ body {
 .tab-content {
     padding: 20px;
 }
+
+/* Your existing CSS remains the same */
+
+@media (max-width: 500px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    #settingsContent {
+        display: none; /* Hide settings content */
+    }
+
+    #navbar {
+        flex-direction: column; /* Stack buttons vertically */
+        height: auto; /* Allow height to expand */
+    }
+
+    .block {
+        width: auto; /* Allow buttons to expand to fit content */
+        margin: 5px 0; /* Adjust vertical margin */
+    }
+
+    #resizeWarning {
+        display: block; /* Show resize warning */
+        text-align: center;
+        margin-top: 20px; /* Add some margin from top */
+    }
+}
