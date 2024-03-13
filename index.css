@@ -1,53 +1,93 @@
 body {
-    background-color: rgb(230, 230, 230);
-    margin: 0px;
-    padding: 0px;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 #navbar {
     width: 100%;
-    height: 110px;
-    text-align: center;
-    background-color: rgb(175, 48, 175);
+    height: 80px; /* Reduced height for better proportion */
+    background-color: #7b1fa2; /* Darker shade of purple */
+    display: flex;
+    align-items: center;
+    justify-content: left; /* Adjusted to left alignment */
+    padding: 0 20px; /* Add some padding */
 }
 
 .block {
-    width: 100px;
-    display: inline-block;
+    width: 50px; /* Reduced width for better spacing */
 }
 
-img {
-    width: 100px;
-    height: 100px;
-    justify-content: center;
+.block img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    border-radius: 50%; /* Circular profile image */
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.options {
-    text-align:center;
+.block img:hover {
+    background-color: #00000075; /* Apply color on hover */
 }
 
-button {
-    width: 25%;
-    border-radius: 5px;
-    border-color: rgb(217, 217, 217);
-    background-color: rgb(217, 217, 217);
+#options {
+    padding: 20px; /* Add some padding */
     text-align: center;
-    cursor: pointer;
-    flex-basis: 50%;
-}
-button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-img:hover {
-    background-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 50%; /* Position at vertical center */
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
 }
 
 #optionsScrollingHighlight {
-    margin: 0 auto;
-    width: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between; /* Equal space between buttons */
     align-items: center;
+    max-width: 600px; /* Limit width to prevent overflow */
+    margin: auto; /* Center horizontally */
 }
+
+button {
+    padding: 10px 20px; /* Add some padding for better clickability */
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #a968b8; /* Darker shade of gray */
+    color: #fbeaff; /* White text */
+    font-size: 16px;
+    margin: 0 10px; /* Add some margin between buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #88239f; /* Darker shade of gray on hover */
+}
+
+#resizeWarning {
+    text-align: center;
+    display: none; /* Initially hidden */
+}
+
+@media (max-width: 500px) {
+    #navbar {
+        display: none; /* Hide navbar */
+    }
+
+    #options {
+        display: none; /* Hide options */
+    }
+
+    #resizeWarning {
+        display: block; /* Show resize warning */
+        margin-top: 50px; /* Add some margin from top */
+    }
+}
+
+
+/* To embrace AI and that it's going to replace the job market one day, 
+I will start using it against itself to achieve my goals. This begins with 
+me using it to write code. If you see this here, then DM me and tell me
+"Cheesus."*/
