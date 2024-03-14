@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="backButton">
-        <a href="#" title="Go back">
+        <a href="../index.html" title="Go back">
             <img src="../imgs/backButton.png" alt="Back Button">
         </a>
     </div>
@@ -45,9 +45,13 @@
                 <label for="fontStyles">5. Font Settings:</label>
                 <div id="fontStyles">
                     <input type="radio" id="defaultFont" name="fontStyle" value="default">
-                    <label for="defaultFont">Default Font</label><br>
+                    <label for="defaultFont">Default Font (Arial)</label><br>
+                    <input type="radio" id="verdanaFont" name="fontStyle" value="verdana">
+                    <label for="verdanaFont" style="font-family: Verdana, sans-serif;">Verdana</label><br>
+                    <input type="radio" id="comicSansFont" name="fontStyle" value="comicSans">
+                    <label for="comicSansFont" style="font-family: 'Courier New', sans-serif">Courier New</label><br>
                     <input type="radio" id="customFont" name="fontStyle" value="custom">
-                    <label for="customFont">Custom Font</label><br>
+                    <label for="customFont">Custom</label><br>
                 </div>
             </div>
             <button onclick="submitGeneralSettings()" class="submitButton">Submit</button>

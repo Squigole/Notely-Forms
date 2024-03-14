@@ -74,7 +74,7 @@ body {
     padding: 20px;
 }
 
-/* Example style for settings content */
+/* Style for settings content */
 .settings-section {
     margin-bottom: 20px;
 }
@@ -82,8 +82,6 @@ body {
 .tab-content {
     padding: 20px;
 }
-
-/* Your existing CSS remains the same */
 
 #resizeWarning {
     display: none;
@@ -94,18 +92,9 @@ body {
         overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
-    #navbar {
-        display: none;
-    }
-
-    #options {
-        display: none;
-    }
-
-    #backButton {
-        display: none;
-    }
-
+    #navbar,
+    #options,
+    #backButton,
     #settingsContent {
         display: none;
     }
