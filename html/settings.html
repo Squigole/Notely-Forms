@@ -14,6 +14,7 @@
     </div>
     <div id="resizeWarning">Upscale the window to view this website.</div>
     <div class="row" id="navbar">
+        <button class="block" id="loadSettings" onclick="showTab('loadAccount')">Load Account</button>
         <button class="block" id="generalSettings" onclick="showTab('general')">General</button>
         <button class="block" id="accountSettings" onclick="showTab('account')">Account</button>
         <button class="block" id="securitySettings" onclick="showTab('security')">Security</button>
@@ -21,8 +22,9 @@
     <div id="settingsContent">
         <div id="generalTab" class="tab-content">
             <!-- General Settings Content -->
+            <h1>General Settings</h1>
             <div>
-                <label for="theme">1. Theme Settings:</label>
+                <label for="theme">Theme Settings:</label>
                 <div id="theme">
                     <input type="radio" id="lightTheme" name="theme" value="light">
                     <label for="lightTheme">Light Theme</label><br>
@@ -33,7 +35,7 @@
                 </div>
             </div>
             <div>
-                <label for="buttonStyles">4. Button Styles:</label>
+                <label for="buttonStyles">Button Styles:</label>
                 <div id="buttonStyles">
                     <input type="radio" id="roundedButtons" name="buttonStyle" value="rounded">
                     <label for="roundedButtons">Rounded Buttons</label><br>
@@ -42,22 +44,24 @@
                 </div>
             </div>
             <div>
-                <label for="fontStyles">5. Font Settings:</label>
+                <label for="fontStyles">Font Settings:</label>
                 <div id="fontStyles">
                     <input type="radio" id="defaultFont" name="fontStyle" value="default">
                     <label for="defaultFont">Default Font (Arial)</label><br>
                     <input type="radio" id="verdanaFont" name="fontStyle" value="verdana">
-                    <label for="verdanaFont" style="font-family: Verdana, sans-serif;">Verdana</label><br>
+                    <label for="verdanaFont">Verdana</label><br>
                     <input type="radio" id="comicSansFont" name="fontStyle" value="comicSans">
-                    <label for="comicSansFont" style="font-family: 'Courier New', sans-serif">Courier New</label><br>
+                    <label for="comicSansFont">Courier New</label><br>
                     <input type="radio" id="customFont" name="fontStyle" value="custom">
                     <label for="customFont">Custom</label><br>
                 </div>
             </div>
             <button onclick="submitGeneralSettings()" class="submitButton">Submit</button>
+            <div id="generalSuccessMessage" class="success-message"></div>
         </div>
         <div id="accountTab" class="tab-content" style="display: none;">
             <!-- Account Settings Content -->
+            <h1>Account Settings</h1>
             <div>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username">
@@ -71,9 +75,11 @@
                 <input type="password" id="password" name="password">
             </div>
             <button onclick="submitAccountSettings()" class="submitButton">Submit</button>
+            <div id="accountSuccessMessage" class="success-message"></div>
         </div>
         <div id="securityTab" class="tab-content" style="display: none;">
             <!-- Security Settings Content -->
+            <h1>Security Settings</h1>
             <div>
                 <label for="enableTwoFactorAuth">Enable Two-Factor Authentication:</label>
                 <input type="checkbox" id="enableTwoFactorAuth" name="enableTwoFactorAuth">
@@ -83,6 +89,17 @@
                 <input type="checkbox" id="enableCaptcha" name="enableCaptcha">
             </div>
             <button onclick="submitSecuritySettings()" class="submitButton">Submit</button>
+            <div id="securitySuccessMessage" class="success-message"></div>
+        </div>
+        <div id="loadAccountTab" class="tab-content" style="display: none; text-align: center;">
+            <h1>Load Account Settings</h1>
+            <div>
+                <label for="accountFile" style="font-size: 18px;">Select Account Settings File:</label>
+                <input type="file" id="accountFile" accept=".json" style="margin-top: 10px;">
+            </div>
+            <button onclick="loadAccountSettings()" class="block" style="margin: 20px auto;">Load Account Settings</button>
+            <button onclick="saveSettingsToFile()" class="block" style="margin: 20px auto;">Save All Settings</button>
+            <div id="loadAccountSuccessMessage" class="success-message"></div>
         </div>
     </div>
 

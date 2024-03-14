@@ -180,3 +180,37 @@ body {
 .submitButton:hover {
     background-color: #88239f; /* Darker shade of purple on hover */
 }
+
+/* Style for the "Load Account" category */
+#loadAccountTab {
+    padding: 20px;
+    text-align: center;
+}
+
+#loadAccountTab div {
+    margin-bottom: 20px;
+}
+
+#loadAccountTab label {
+    font-weight: bold;
+}
+
+#loadAccountTab input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+    padding: 10px;
+    background-color: #e0f7d9;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    color: #155724;
+}
