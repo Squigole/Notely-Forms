@@ -85,23 +85,29 @@ body {
 
 /* Your existing CSS remains the same */
 
+#resizeWarning {
+    display: none;
+}
+
 @media (max-width: 500px) {
     body {
         overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
-    #settingsContent {
-        display: none; /* Hide settings content */
-    }
-
     #navbar {
-        flex-direction: column; /* Stack buttons vertically */
-        height: auto; /* Allow height to expand */
+        display: none;
     }
 
-    .block {
-        width: auto; /* Allow buttons to expand to fit content */
-        margin: 5px 0; /* Adjust vertical margin */
+    #options {
+        display: none;
+    }
+
+    #backButton {
+        display: none;
+    }
+
+    #settingsContent {
+        display: none;
     }
 
     #resizeWarning {
@@ -109,4 +115,79 @@ body {
         text-align: center;
         margin-top: 20px; /* Add some margin from top */
     }
+}
+
+/* Style for the "General" category */
+#generalTab {
+    padding: 20px;
+}
+
+#generalTab div {
+    margin-bottom: 20px;
+}
+
+#generalTab label {
+    font-weight: bold;
+}
+
+#generalTab input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Style for the "Account" category */
+#accountTab {
+    padding: 20px;
+}
+
+#accountTab div {
+    margin-bottom: 20px;
+}
+
+#accountTab label {
+    font-weight: bold;
+}
+
+#accountTab input[type="text"],
+#accountTab input[type="email"],
+#accountTab input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for the "Security" category */
+#securityTab {
+    padding: 20px;
+}
+
+#securityTab div {
+    margin-bottom: 20px;
+}
+
+#securityTab label {
+    font-weight: bold;
+}
+
+#securityTab input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Style for the submit buttons */
+.submitButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7b1fa2; /* Darker shade of purple */
+    color: #fbeaff; /* White text */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin-top: 10px; /* Add margin from the settings content */
+}
+
+.submitButton:hover {
+    background-color: #88239f; /* Darker shade of purple on hover */
 }
